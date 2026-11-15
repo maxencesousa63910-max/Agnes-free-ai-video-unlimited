@@ -717,7 +717,7 @@ async function startGeneration() {
 
     state.durationFrames = parseInt(durationSelect.value, 10) || 153;
     state.motionKey = motionSelect.value;
-
+mode: state.imageDataUri ? "keyframe" : "text",
     // Construire la file d'attente
     const selectedStyles = Array.from(state.selectedStyles)
         .map(id => STYLES.find(s => s.id === id))
