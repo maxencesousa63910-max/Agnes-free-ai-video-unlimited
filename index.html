@@ -783,7 +783,7 @@ async function startGeneration() {
 const body = {
     model: MODELS.video,
     prompt: finalPrompt,
-    mode: state.imageDataUri ? "keyframe" : "text",
+    mode: state.imageDataUri ? "img2video" : "text",
     seconds: String(Math.max(4, Math.min(12, Math.round(item.numFrames / FRAME_RATE)))),
     size: "720P",
     aspect_ratio: "9:16",
